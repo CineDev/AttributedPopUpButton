@@ -49,6 +49,11 @@ final public class AttributedPopUpButton: NSPopUpButton {
 		}
 	}
 	
+	deinit {
+		subscriber?.cancel()
+	}
+	
+	
 	// MARK: Items Selection
 	
 	/// Holds the selected items from the attributedMenu.
