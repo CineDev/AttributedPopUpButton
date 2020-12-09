@@ -129,7 +129,7 @@ final public class AttributedPopUpButton: NSPopUpButton {
 			selectedItems = [item]
 			return
 		}
-		selectedItems.removeAll()
+		synchronizeTitleAndSelectedItem()
 	}
 	
 	public override func selectItem(at index: Int) {
@@ -137,7 +137,7 @@ final public class AttributedPopUpButton: NSPopUpButton {
 			select(menu.items[index])
 			return
 		}
-		selectedItems.removeAll()
+		synchronizeTitleAndSelectedItem()
 	}
 	
 	public override func selectItem(withTag tag: Int) -> Bool {
@@ -145,7 +145,7 @@ final public class AttributedPopUpButton: NSPopUpButton {
 			select(item)
 			return true
 		}
-		selectedItems.removeAll()
+		synchronizeTitleAndSelectedItem()
 		return false
 	}
 	
@@ -154,7 +154,7 @@ final public class AttributedPopUpButton: NSPopUpButton {
 			select(item)
 			return
 		}
-		selectedItems.removeAll()
+		synchronizeTitleAndSelectedItem()
 	}
 	
 	public override func synchronizeTitleAndSelectedItem() {
