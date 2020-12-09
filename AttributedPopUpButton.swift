@@ -92,8 +92,8 @@ final public class AttributedPopUpButton: NSPopUpButton {
 				menuItem = NSMenuItem(title: item.title, action: nil, keyEquivalent: "")
 				menu?.addItem(menuItem)
 			}
-			item.state = .on
 			oldValues.forEach{ $0.state = .off }
+			item.state = .on
 			super.select(menuItem)
 		} else {
 			super.select(nil)
